@@ -1,6 +1,7 @@
 const mongoose=require('mongoose');
 const validator =require('validator');
 
+
 const userSchema=new mongoose.Schema({
 name:{
     type:String,
@@ -52,3 +53,6 @@ watchList:[],
 favourites:[],
 
 });
+
+const userModel=new mongoose.model("users",userSchema);
+module.exports=userModel; 
